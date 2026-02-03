@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  prev?: CollectionEntry<'blog'>;
+  next?: CollectionEntry<'blog'>;
+}
+
+const { prev, next } = Astro.props;
+---
+
+{(prev || next) && (
+  <nav class="post-nav">
+    {prev && (
+      <a href={`/blog/${prev.slug}`} class="post-nav-link post-nav-link--prev">
+        &larr; {prev.data.title}
+      </a>
+    )}
+    {next && (
+      <a href={`/blog/${next.slug}`} class="post-nav-link post-nav-link--next">
+        {next.data.title} &rarr;
+      </a>
+    )}
+  </nav>
+)}

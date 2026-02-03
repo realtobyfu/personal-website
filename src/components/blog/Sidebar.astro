@@ -1,0 +1,23 @@
+---
+interface Props {
+  date: Date;
+  location?: string;
+}
+
+const { date, location } = Astro.props;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<aside class="blog-sidebar">
+  <div class="sidebar-meta">
+    <div class="sidebar-date">{formatDate(date)}</div>
+    {location && <div class="sidebar-location">{location}</div>}
+  </div>
+</aside>

@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import SiteHeader from '../../components/blog/SiteHeader.astro';
+import PostList from '../../components/blog/PostList.astro';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BlogLayout title="Blog — Tobias Fu" description="Essays and photo posts by Tobias Fu">
+  <div class="blog-container">
+    <SiteHeader currentPage="essays" />
+
+    <header class="blog-index-header">
+    </header>
+
+    <PostList posts={sortedPosts} />
+  </div>
+</BlogLayout>

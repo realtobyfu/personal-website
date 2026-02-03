@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { posts } = Astro.props;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+---
+
+<ul class="post-list">
+  {posts.map((post) => (
+    <li class="post-list-item">
+      <a href={`/blog/${post.slug}`} class="post-list-link">
+        <h2 class="post-list-title">{post.data.title}</h2>
+        <div class="post-list-meta">
+          <span class="post-list-date">{formatDate(post.data.date)}</span>
+          <span class="post-list-tag">{post.data.tag}</span>
+        </div>
+      </a>
+    </li>
+  ))}
+</ul>

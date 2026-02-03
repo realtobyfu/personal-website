@@ -1,0 +1,9 @@
+---
+interface Props {
+  href?: string;
+}
+
+const { href = '/blog' } = Astro.props;
+---
+
+<a href={href} class="back-link">&larr; Essays</a>

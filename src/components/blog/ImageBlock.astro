@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  caption?: string;
+  index: number;
+}
+
+const { src, alt, caption, index } = Astro.props;
+---
+
+<div class="image-block">
+  <figure
+    class="image-block-figure"
+    data-carousel-trigger
+    data-index={index}
+  >
+    <Image
+      src={src}
+      alt={alt}
+      class="image-block-img"
+      widths={[400, 800, 1200]}
+      sizes="(max-width: 768px) 100vw, 720px"
+    />
+    {caption && <figcaption class="image-block-caption">{caption}</figcaption>}
+  </figure>
+</div>

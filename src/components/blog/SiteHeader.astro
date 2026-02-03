@@ -1,0 +1,13 @@
+---
+interface Props {
+  currentPage?: 'essays' | 'projects' | 'about';
+}
+
+const { currentPage } = Astro.props;
+---
+
+<nav class="site-header">
+  <a href="/blog" class:list={['site-nav-link', { active: currentPage === 'essays' }]}>Essays</a>
+  <a href="/projects" class:list={['site-nav-link', { active: currentPage === 'projects' }]}>Projects</a>
+  <a href="/about" class:list={['site-nav-link', { active: currentPage === 'about' }]}>About</a>
+</nav>
