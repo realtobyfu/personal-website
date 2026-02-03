@@ -188,16 +188,24 @@ export default function Carousel({ images: propImages }: CarouselProps) {
         <div className="carousel-caption">{currentImage.caption}</div>
       )}
 
-      <button
-        className="carousel-nav carousel-nav--prev"
-        onClick={goPrev}
-        aria-label="Previous image"
-      />
-      <button
-        className="carousel-nav carousel-nav--next"
-        onClick={goNext}
-        aria-label="Next image"
-      />
+      {currentIndex > 0 && (
+        <button
+          className="carousel-nav carousel-nav--prev"
+          onClick={goPrev}
+          aria-label="Previous image"
+        >
+          ‹
+        </button>
+      )}
+      {currentIndex < images.length - 1 && (
+        <button
+          className="carousel-nav carousel-nav--next"
+          onClick={goNext}
+          aria-label="Next image"
+        >
+          ›
+        </button>
+      )}
     </div>
   );
 }
