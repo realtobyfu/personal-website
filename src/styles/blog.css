@@ -52,7 +52,7 @@
 
   /* Layout - fluid */
   --container-padding: clamp(1.25rem, 5vw, 2.5rem);
-  --max-width: min(92vw, 900px);
+  --max-width: clamp(320px, 85vw, 900px);
 }
 
 /* Reset & Base */
@@ -63,7 +63,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw + 10px, 18px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -205,7 +205,7 @@ a:hover {
 /* Post Title */
 .post-title {
   font-family: var(--font-title);
-  font-size: clamp(2.25rem, 8vw, 4rem);
+  font-size: clamp(2rem, 5vw + 0.5rem, 3.25rem);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -0.03em;
@@ -385,9 +385,9 @@ a:hover {
 /* Cropped/panoramic images - constrain height */
 .prose .img-cropped img,
 .prose img.img-cropped {
-  max-height: 560px;
+  max-height: 460px;
   object-fit: cover;
-  width: 100%;
+  width: 80%;
 }
 
 /* Consecutive images (img + img) in same paragraph → side by side */

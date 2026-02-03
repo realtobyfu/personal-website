@@ -1,9 +1,10 @@
 ---
 interface Props {
   href?: string;
+  label?: string;
 }
 
-const { href = '/blog' } = Astro.props;
+const { href = '/blog', label = 'Essays' } = Astro.props;
 ---
 
-<a href={href} class="back-link">&larr; Essays</a>
+<a href={href} class="back-link">&larr; {label}</a>

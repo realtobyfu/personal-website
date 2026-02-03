@@ -1,3 +1,28 @@
 ---
-return Astro.redirect('/blog');
+import BlogLayout from '../layouts/BlogLayout.astro';
+import SiteHeader from '../components/blog/SiteHeader.astro';
 ---
+
+<BlogLayout title="Tobias Fu" description="Tobias Fu's personal website">
+  <div class="blog-container">
+    <SiteHeader currentPage="home" />
+
+    <main class="home-content">
+      <h1 class="home-title">Tobias Fu</h1>
+    </main>
+  </div>
+</BlogLayout>
+
+<style>
+  .home-content {
+    margin-top: var(--space-3xl);
+  }
+
+  .home-title {
+    font-family: var(--font-title);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+  }
+</style>

@@ -27,9 +27,12 @@ interface Props {
 const { post, prev, next } = Astro.props;
 const { Content } = await post.render();
 const { title, description, type } = post.data;
+
+// Strip HTML tags for browser tab title
+const plainTitle = title.replace(/<[^>]*>/g, '');
 ---
 
-<BlogLayout title={`${title} — Tobias Fu`} description={description}>
+<BlogLayout title={`${plainTitle} — Tobias Fu`} description={description}>
   {type === 'essay' ? (
     <EssayLayout post={post} prev={prev} next={next}>
       <Content />

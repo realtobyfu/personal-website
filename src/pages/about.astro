@@ -1,0 +1,44 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import SiteHeader from '../components/blog/SiteHeader.astro';
+---
+
+<BlogLayout title="About — Tobias Fu" description="About Tobias Fu">
+  <div class="blog-container">
+    <SiteHeader currentPage="about" />
+
+    <main class="blog-content">
+      <div class="prose">
+        <p>Tobias was born in Shanghai, China on the 10th of July, 2002.</p>
+      </div>
+      <a href="mailto:3tobiasfu@gmail.com" class="email-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+        <span>compose a birthday message</span>
+      </a>
+    </main>
+  </div>
+</BlogLayout>
+
+<style>
+  .email-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-md);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    transition: all 0.15s ease;
+  }
+
+  .email-button:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+</style>
