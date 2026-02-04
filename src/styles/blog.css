@@ -472,6 +472,122 @@ a:hover {
 }
 
 /* ============================================
+   Inline Carousel
+   ============================================ */
+
+.inline-carousel {
+  width: 100%;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.inline-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline-carousel-image-wrapper {
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.inline-carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.15s ease;
+}
+
+.inline-carousel-image-wrapper:hover .inline-carousel-image {
+  opacity: 0.95;
+}
+
+.inline-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--color-text);
+  padding: var(--space-sm);
+  z-index: 2;
+}
+
+.inline-carousel-nav--prev {
+  left: calc(-1 * var(--space-2xl) - 20px);
+}
+
+.inline-carousel-nav--next {
+  right: calc(-1 * var(--space-2xl) - 20px);
+}
+
+.inline-carousel-nav:hover {
+  opacity: 1;
+}
+
+.inline-carousel-caption {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+  text-align: center;
+}
+
+.inline-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.inline-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-text-faint);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.inline-carousel-dot:hover {
+  background: var(--color-text-muted);
+}
+
+.inline-carousel-dot.active {
+  background: var(--color-text);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .inline-carousel-nav {
+    font-size: 24px;
+    padding: var(--space-xs);
+  }
+
+  .inline-carousel-nav--prev {
+    left: calc(-1 * var(--space-lg));
+  }
+
+  .inline-carousel-nav--next {
+    right: calc(-1 * var(--space-lg));
+  }
+}
+
+/* ============================================
    Post Navigation
    ============================================ */
 
