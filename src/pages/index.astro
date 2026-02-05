@@ -28,6 +28,7 @@ import SiteHeader from '../components/blog/SiteHeader.astro';
   .home-title-wrapper {
     position: relative;
     display: inline-block;
+    perspective: 800px;
   }
 
   .home-title {
@@ -37,7 +38,8 @@ import SiteHeader from '../components/blog/SiteHeader.astro';
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--color-text);
-    transform: skewX(-14deg);
+    transform: rotateY(-12deg);
+    transform-origin: right center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -57,16 +59,17 @@ import SiteHeader from '../components/blog/SiteHeader.astro';
     bottom: 0;
     background: white;
     border: 3px solid black;
-    transform: skewX(-14deg);
+    transform: rotateY(-12deg);
+    transform-origin: right center;
   }
 
   .title-stack-2 {
-    transform: translate(20px, 20px) skewX(-14deg);
+    transform: translate(20px, 20px) rotateY(-12deg);
     z-index: 2;
   }
 
   .title-stack-3 {
-    transform: translate(40px, 40px) skewX(-14deg);
+    transform: translate(40px, 40px) rotateY(-12deg);
     z-index: 1;
   }
 
