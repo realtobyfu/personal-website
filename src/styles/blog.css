@@ -289,7 +289,7 @@ a:hover {
 
 .prose {
   font-family: var(--font-body);
-  font-size: clamp(17px, 2.5vw, 20px);
+  font-size: clamp(18px, 2.5vw, 21px);
   line-height: 1.75;
   color: var(--color-text-body);
 }
@@ -746,6 +746,10 @@ a:hover {
    ============================================ */
 
 @media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+  }
+
   .post-meta-row {
     flex-wrap: wrap;
     gap: var(--space-sm) var(--space-md);
@@ -764,6 +768,14 @@ a:hover {
   .carousel-caption {
     bottom: var(--space-lg);
     font-size: var(--text-xs);
+  }
+
+  /* Embeds full width on mobile */
+  .embed-container,
+  .prose div:has(> iframe) {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
