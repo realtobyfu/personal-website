@@ -777,6 +777,20 @@ a:hover {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+
+  /* Reduce padding for single image rows on mobile */
+  .prose p:has(> img:only-child) {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  .inline-carousel {
+    margin-bottom: var(--space-lg);
+  }
+
+  .image-block {
+    margin: var(--space-lg) 0;
+  }
 }
 
 /* ============================================
