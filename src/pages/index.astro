@@ -8,7 +8,14 @@ import SiteHeader from '../components/blog/SiteHeader.astro';
     <SiteHeader currentPage="home" />
 
     <main class="home-content">
-      <h1 class="home-title">Tobias Fu</h1>
+      <div class="home-title-wrapper">
+        <div class="title-stack title-stack-3"></div>
+        <div class="title-stack title-stack-2"></div>
+        <h1 class="home-title">
+          <span class="name-first">Tobias</span>
+          <span class="name-last">Fu</span>
+        </h1>
+      </div>
     </main>
   </div>
 </BlogLayout>
@@ -18,11 +25,58 @@ import SiteHeader from '../components/blog/SiteHeader.astro';
     margin-top: var(--space-3xl);
   }
 
+  .home-title-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
   .home-title {
-    font-family: var(--font-title);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 900;
-    letter-spacing: -0.03em;
+    font-family: 'Bodoni Moda', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
     color: var(--color-text);
+    transform: skewX(-14deg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 0.85;
+    background: white;
+    border: 3px solid black;
+    padding: 1em 1.5em;
+    position: relative;
+    z-index: 3;
+  }
+
+  .title-stack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border: 3px solid black;
+    transform: skewX(-14deg);
+  }
+
+  .title-stack-2 {
+    transform: translate(20px, 20px) skewX(-14deg);
+    z-index: 2;
+  }
+
+  .title-stack-3 {
+    transform: translate(40px, 40px) skewX(-14deg);
+    z-index: 1;
+  }
+
+  .name-first {
+    display: block;
+  }
+
+  .name-last {
+    display: block;
+    margin-left: 3em;
+    margin-top: 0.3em;
   }
 </style>
