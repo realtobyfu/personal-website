@@ -1,0 +1,88 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import SiteHeader from '../../components/blog/SiteHeader.astro';
+import BackLink from '../../components/blog/BackLink.astro';
+import { Image } from 'astro:assets';
+import logo from '../../content/projects/write-it-down-logo.png';
+---
+
+<BlogLayout title="Write-It-Down — Tobias Fu" description="Write-It-Down — Notes App for iOS">
+  <div class="blog-container">
+    <SiteHeader currentPage="projects" />
+
+    <main class="blog-content">
+      <BackLink href="/projects" label="Projects" />
+
+      <div class="project-header">
+        <Image src={logo} alt="Write-It-Down app icon" width={80} height={80} densities={[2, 3]} class="project-logo" />
+        <div>
+          <h1 class="project-title">Write-It-Down</h1>
+          <p class="project-subtitle">Notes App for iOS</p>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>
+          My first app on the App Store, I just wanted to create a new unique way of taking notes.
+        </p>
+      </div>
+
+      <a href="https://apps.apple.com/us/app/write-it-down/id6742731898" class="store-button" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
+          <path d="m8 12 4-4 4 4"/>
+          <path d="M12 16V8"/>
+        </svg>
+        <span>App Store</span>
+      </a>
+    </main>
+  </div>
+</BlogLayout>
+
+<style>
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-logo {
+    border-radius: 18px;
+  }
+
+  .project-title {
+    font-family: var(--font-sans);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .project-subtitle {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    margin: 0.25rem 0 0 0;
+  }
+
+  .store-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-md);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    transition: all 0.15s ease;
+  }
+
+  .store-button:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+</style>

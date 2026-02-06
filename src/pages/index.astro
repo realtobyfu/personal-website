@@ -16,6 +16,7 @@ import SiteHeader from '../components/blog/SiteHeader.astro';
           <span class="name-last">Fu</span>
         </h1>
       </div>
+      <p class="home-placeholder">Updates coming soon... that's it for now.</p>
     </main>
   </div>
 </BlogLayout>
@@ -81,5 +82,11 @@ import SiteHeader from '../components/blog/SiteHeader.astro';
     display: block;
     margin-left: 3em;
     margin-top: 0.3em;
+  }
+
+  .home-placeholder {
+    margin-top: var(--space-2xl, 3rem);
+    color: var(--color-text-muted, #888);
+    font-size: 1.25rem;
   }
 </style>

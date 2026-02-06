@@ -3,7 +3,7 @@ title: "Looking for America in <em>Conway, New Hampshire</em>"
 date: 2026-02-02
 location: "Honaunau, HI"
 type: essay
-description: ""
+description: "On friendship, loss, and finding belonging in rural New Hampshire."
 tag: "Personal Phenomenology"
 draft: false
 images:
@@ -59,7 +59,7 @@ I only went to first of the four Phish shows but Pat, like many other _Phish boy
 
 I bumped into other people quite a few times during and after the concert, and Pat had to explain to everyone it was the first time I ever had _mushrooms_, so people wouldn't try to fight me. Other than that, I had an exceptionally beautiful night. During the concert, I felt like I was able to examine my thoughts and understand my motivation better, while looking at the colorful lights that came from the stage. I thought a lot more about what I really value and pursue in life (without coming to any clear conclusions), and felt genuinely connected to other humans. It felt like a cognitive barrier in my mind was broken down. I also came to realize how much I really value my family, even though I am in a distant land and have not been all that close to them.
 
-It’s a closed-door concert hall with lots of pot smokers, and close to the end of the concert, the air felt quite filthy, which I detest. Whatever they were smoking was probably not organic. Patrick had to help me walk to the house I was staying because I had a hard time walking in a straight line under the influence of mushroom. It turned out to be a few miles of walk and we had the company of many other concertgoers. Patrick asked me about the experience, I asked him as well, about what he experiences when doing mushrooms and what he likes about it. He told me that mushroom helps him focus on what really matters, before saying goodnight. At the house, I slept really well. The next day, Pat drove me across Hudson River to the train station in Rensselaer, where I took the train back to Boston.
+It’s a closed-door concert hall with lots of pot smokers, and close to the end of the concert, the air felt quite filthy, which I detest. Whatever they were smoking was probably not organic. Patrick had to help me walk to the house I was staying because I had a hard time walking in a straight line under the influence of mushroom. It turned out to be a few miles of walk and we had the company of many other concertgoers. Patrick asked me about the experience, I asked him as well, about what he experiences when doing mushrooms and what he likes about it. He told me that mushroom helps him focus on what really matters, before saying goodnight He was staying at a hostel a few blocks away. At the house, I slept really well. The next day, Pat drove me across Hudson River to the train station in Rensselaer, where I took the train back to Boston.
 
 During the Thanksgiving of 2024, I came back to Pat’s house again. It had already started to snow a little bit the night I got there. The second morning I woke up, I saw the sunlight coming through the windows into the common area on the ground floor, through the branches of trees in the forest overlaid with snow. It's not too cold inside, but I could definitely feel that I am in Conway, where the air is much more crisp and clean, compared to suburban Boston. I took a walk around the neighborhood, heard the sound of thawing snow on the branches over my head, which I only noticed for the first time in Pat's backyard. I even asked Pat what it was when I came back from the walk. That sound was accompanied by visuals of falling water drops layered between branches.
 

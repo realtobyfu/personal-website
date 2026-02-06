@@ -17,7 +17,8 @@ const { title, date, location, tag } = post.data;
 // Format date as "MMM YYYY"
 const formattedDate = date.toLocaleDateString('en-US', {
   month: 'short',
-  year: 'numeric'
+  year: 'numeric',
+  timeZone: 'UTC',
 }).toUpperCase();
 ---
 

@@ -1,0 +1,40 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import SiteHeader from '../../components/blog/SiteHeader.astro';
+
+const projects = [
+  { title: 'Fieldnote', date: 'Dec 2025 – Jan 2026', href: '/projects/fieldnote' },
+  { title: 'Write-It-Down', date: 'April 2025', href: '/projects/write-it-down' }
+];
+---
+
+<BlogLayout title="Projects — Tobias Fu" description="Projects by Tobias Fu">
+  <div class="blog-container">
+    <SiteHeader currentPage="projects" />
+
+    <header class="blog-index-header">
+    </header>
+
+    <ul class="post-list">
+      {projects.map((project) => (
+        <li class="post-list-item">
+          {project.href ? (
+            <a href={project.href} class="post-list-link">
+              <h2 class="post-list-title">{project.title}</h2>
+              <div class="post-list-meta">
+                <span class="post-list-date">{project.date}</span>
+              </div>
+            </a>
+          ) : (
+            <div class="post-list-link">
+              <h2 class="post-list-title">{project.title}</h2>
+              <div class="post-list-meta">
+                <span class="post-list-date">{project.date}</span>
+              </div>
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</BlogLayout>
