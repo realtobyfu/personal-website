@@ -23,7 +23,7 @@ There was also Marnix, who is Dutch, lives in southern New Hampshire (near Keene
 
 ![You know you are pulling up to a house of Sanders supporters when you see a sign like this in rural N.H. or Vermont](peace-sign.jpeg)![Game with the girls](game-sorry.jpeg)
 
-I don't have much impression of the next few days, aside from cycling to Cathedral Ledge, hiking the trail, and taking in a breathtaking view of the surrounding valley. I didn't realize then that in the years to come, I would join Patrick on far more eventful hikes up much bigger mountains. Another trail I like to do on my own is Black Cap. It's a relatively short walk (about an hour), but with good elevation gain and fascinating views of the New Hampshire and Maine landscape. I like to bring a book and stay at the top for a while. There's something special about being on your own on a mountaintop, listening to the wind and the tranquility of nature. I always feel like I get a new perspective on things up there.
+I don't have much impression of the next few days, aside from cycling to Cathedral Ledge, hiking the trail, and taking in a breathtaking view of the surrounding valley. I didn't realize then that in the years to come, I would join Patrick on far more eventful hikes up much bigger mountains. Another trail I like to do on my own is Black Cap. It's a relatively short walk (about an hour), but with good elevation gain and fascinating views of the New Hampshire and Maine landscape. I like to bring a book and stay at the top for a while. There's something special about being on your own on a mountaintop, listening to the wind and feeling the tranquility of nature. I always feel like I get a new perspective on things up there.
 
 ![Top of Black Cap](black-cap.jpeg)
 
