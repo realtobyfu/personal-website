@@ -1,5 +1,5 @@
 ---
-title: "Paris, August 2025"
+title: "Paris, August 2023"
 date: 2023-08-31
 location: "Paris, France"
 type: photos
