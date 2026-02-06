@@ -14,7 +14,7 @@ images:
   - src: ./T1001758.JPG
     caption: "Near Luxembourg"
   - src: ./T1001771.JPG
-    caption: "Movie Poster, blvd. Raspail"
+    caption: "Movie Poster"
   - src: ./T1001772.JPG
     caption: "'A coffee that also wakes up inclusion'"
   - src: ./T1001778.JPG
