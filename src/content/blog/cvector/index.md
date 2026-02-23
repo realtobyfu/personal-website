@@ -9,7 +9,7 @@ draft: false
 
 *Friday Feb 20th*
 
-I decided that I would use a ralph wiggum loop overnight to build the project, being inspired by Geoffrey Huntley's article [Ralph](https://ghuntley.com/ralph/).
+I decided that I would use a ralph wiggum loop overnight to build the project, being inspired by Geoffrey Huntley's article [Ralph Wiggum as a "software engineer"](https://ghuntley.com/ralph/).
 
 > The idea behind ralph is when we are engineering a series of features we break them down into incremental steps each with its own user story and acceptance criteria, and we are going to run LLM sessions where each time it tries to work on one feature, document its progress until all tasks are accepted. If a ralph iteration (1 LLM session) doesn't complete one task, it's going to write its progress on that task into a file, so the next run can pick it up.
 
@@ -21,7 +21,7 @@ I chatted with Claude about how to do the frontend and database design, after fe
 
 ![Asking Claude for frontend designs](./claude-designs.png)
 
-*I asked it to give 3-4 frontend designs and settled on one of them, asked it to use light mode and make the UI more legible (since we are using it for industrial control purposes, readability is key)*
+I asked it to give 3-4 frontend designs and settled on one of them, asked it to use light mode and make the UI more legible (since we are using it for industrial control purposes, readability is key)
 
 ![Iterating on the UI design](./ui-iteration.png)
 
