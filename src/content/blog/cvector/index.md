@@ -49,8 +49,6 @@ We got 8 tasks in total, fewer than I imagined, and to run the ralph loop, we ju
 
 ![Ralph loop running](./ralph-loop.png)
 
-We ended up completing all the tasks in just a few ralph sessions, and here's the completed product:
+We ended up completing all the tasks in a single ralph session.
 
----
-
-The whole thing took about one evening. The key insight for me is that the ralph loop works best when you front-load the thinking — spend time on the PRD, the task breakdown, the tech stack decisions — and then let the loop handle the mechanical execution. The LLM is remarkably good at grinding through well-scoped tasks, but it still needs a human to decide *what* to build and *why*. That division of labor felt right.
+The whole thing took about 25 minutes. The key insight for me is that the ralph loop works best when you front-load the thinking — spend time on the PRD, the task breakdown, the tech stack decisions — and then let the loop handle the mechanical execution. The LLM is remarkably good at grinding through well-scoped tasks, but it still needs a human to decide *what* to build and *why*. That division of labor felt right.
