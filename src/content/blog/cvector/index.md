@@ -11,7 +11,11 @@ draft: false
 
 I decided that I would use a ralph wiggum loop overnight to build the project, being inspired by Geoffrey Huntley's article [Ralph Wiggum as a "software engineer"](https://ghuntley.com/ralph/).
 
-> The idea behind ralph is when we are engineering a series of features we break them down into incremental steps each with its own user story and acceptance criteria, and we are going to run LLM sessions where each time it tries to work on one feature, document its progress until all tasks are accepted. If a ralph iteration (1 LLM session) doesn't complete one task, it's going to write its progress on that task into a file, so the next run can pick it up.
+<div style="padding-left: 1.5em;">
+
+The idea behind ralph (from [Geoffrey's article](https://ghuntley.com/ralph/)) is when we are engineering a series of features we break them down into incremental steps each with its own user story and acceptance criteria, and we are going to run LLM sessions where each time it tries to work on one feature, document its progress until all tasks are accepted. If a ralph iteration (1 LLM session) doesn't complete one task, it's going to write its progress on that task into a file, so the next run can pick it up.
+
+</div>
 
 With all its limitations, I found it to be a strong approach when we need to build a sophisticated app from ground up.
 
