@@ -2,10 +2,11 @@
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  posts: CollectionEntry<'blog'>[];
+  posts: CollectionEntry<'blog'>[] | CollectionEntry<'writing'>[];
+  basePath?: string;
 }
 
-const { posts } = Astro.props;
+const { posts, basePath = '/blog' } = Astro.props;
 
 function formatDate(date: Date): string {
   return date.toLocaleDateString('en-US', {
@@ -20,7 +21,7 @@ function formatDate(date: Date): string {
 <ul class="post-list">
   {posts.map((post) => (
     <li class="post-list-item">
-      <a href={`/blog/${post.slug}`} class="post-list-link">
+      <a href={`${basePath}/${post.slug}`} class="post-list-link">
         <h2 class="post-list-title" set:html={post.data.title} />
         <div class="post-list-meta">
           <span class="post-list-date">{post.data.displayDate ?? formatDate(post.data.date)}</span>
