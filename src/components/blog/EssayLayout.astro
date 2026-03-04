@@ -6,12 +6,16 @@ import PostNav from './PostNav.astro';
 import Carousel from './Carousel';
 
 interface Props {
-  post: CollectionEntry<'blog'>;
-  prev?: CollectionEntry<'blog'>;
-  next?: CollectionEntry<'blog'>;
+  post: CollectionEntry<'blog'> | CollectionEntry<'writing'>;
+  prev?: CollectionEntry<'blog'> | CollectionEntry<'writing'> | null;
+  next?: CollectionEntry<'blog'> | CollectionEntry<'writing'> | null;
+  currentPage?: 'home' | 'essays';
+  backHref?: string;
+  backLabel?: string;
+  basePath?: string;
 }
 
-const { post, prev, next } = Astro.props;
+const { post, prev, next, currentPage = 'essays', backHref = '/blog', backLabel = 'Essays', basePath = '/blog' } = Astro.props;
 const { title, date, location, tag } = post.data;
 
 // Format date as "MMM YYYY"
@@ -23,10 +27,10 @@ const formattedDate = date.toLocaleDateString('en-US', {
 ---
 
 <div class="blog-container">
-  <SiteHeader currentPage="essays" />
+  <SiteHeader currentPage={currentPage} />
 
   <header class="blog-header">
-    <BackLink />
+    <BackLink href={backHref} label={backLabel} />
   </header>
 
   <main class="blog-content">
@@ -46,7 +50,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
       </div>
     </article>
 
-    <PostNav prev={prev} next={next} />
+    <PostNav prev={prev} next={next} basePath={basePath} />
   </main>
 </div>
 

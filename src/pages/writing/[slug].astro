@@ -1,0 +1,45 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import EssayLayout from '../../components/blog/EssayLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('writing', ({ data }) => !data.draft);
+  const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+  return sortedPosts.map((post, index) => ({
+    params: { slug: post.slug },
+    props: {
+      post,
+      prev: sortedPosts[index + 1] || null,
+      next: sortedPosts[index - 1] || null,
+    },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'writing'>;
+  prev: CollectionEntry<'writing'> | null;
+  next: CollectionEntry<'writing'> | null;
+}
+
+const { post, prev, next } = Astro.props;
+const { Content } = await post.render();
+const { title, description } = post.data;
+
+const plainTitle = title.replace(/<[^>]*>/g, '');
+---
+
+<BlogLayout title={`${plainTitle} — Tobias Fu`} description={description}>
+  <EssayLayout
+    post={post}
+    prev={prev}
+    next={next}
+    currentPage="home"
+    backHref="/"
+    backLabel="Writing"
+    basePath="/writing"
+  >
+    <Content />
+  </EssayLayout>
+</BlogLayout>
