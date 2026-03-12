@@ -1,5 +1,5 @@
 ---
-title: "The Ralph Loop"
+title: "The Ralph Loop — Letting an AI Agent Build My macOS App"
 date: 2026-03-05
 type: essay
 description: "I put Claude Code in a dumb bash loop, pointed it at a spec, and walked away. It built most of a macOS app while I made dinner."
