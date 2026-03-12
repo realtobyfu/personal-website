@@ -42,7 +42,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
           {location && <span class="meta-location">{location}</span>}
           {tag && <span class="meta-tag">{tag}</span>}
         </div>
-        <h1 class="post-title" set:html={title} />
+        <h1 class={`post-title${isTechnical ? ' post-title--technical' : ''}`} set:html={title} />
         <div class="article-rule"></div>
       </header>
 
