@@ -382,6 +382,33 @@ a:hover {
   margin-right: auto;
 }
 
+/* App icon: small, centered, rounded */
+.prose .app-icon-wrap {
+  text-align: center;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.prose .app-icon-wrap .app-icon {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 8px;
+  box-sizing: content-box;
+}
+
+/* Gallery caption below image strips */
+.prose .gallery-caption {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: calc(-1 * var(--space-xl));
+  margin-bottom: var(--space-2xl);
+  letter-spacing: 0.01em;
+}
+
 /* Cropped/panoramic images - constrain height */
 .prose .img-cropped img,
 .prose img.img-cropped {
@@ -403,6 +430,34 @@ a:hover {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+/* Three or more images → horizontal scroll gallery */
+.prose p:has(> img:nth-child(3)) {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: var(--space-md);
+  padding-bottom: var(--space-sm);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+  cursor: grab;
+}
+
+.prose p:has(> img:nth-child(3)):active {
+  cursor: grabbing;
+}
+
+.prose p:has(> img:nth-child(3)) > img {
+  flex: 0 0 auto;
+  width: 78%;
+  max-width: 640px;
+  height: auto;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border-radius: 6px;
 }
 
 /* ============================================
