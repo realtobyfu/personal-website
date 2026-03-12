@@ -1,5 +1,5 @@
 ---
-title: "The Ralph Loop — Building a macOS App by Letting an AI Agent Do Laps"
+title: "The Ralph Loop"
 date: 2026-03-05
 type: essay
 description: "I put Claude Code in a dumb bash loop, pointed it at a spec, and walked away. It built most of a macOS app while I made dinner."
@@ -7,7 +7,7 @@ tag: "AI Engineering"
 draft: false
 ---
 
-I put Claude Code in a dumb bash loop, pointed it at a spec, and walked away. It built most of a macOS app while I made dinner. This isn't a flex — the technique is so dumb it's named after Ralph Wiggum.
+I put Claude Code in a dumb bash loop, pointed it at a spec, and walked away. It built most of a macOS app while I made dinner. This isn't a flex, the technique is so dumb it's named after Ralph Wiggum.
 
 Grove is a knowledge workspace for macOS and iOS — notes, boards, AI-powered Socratic sessions, and a share extension for fast capture. That means SwiftData sync, native navigation primitives, a non-trivial model layer, and enough platform surface area to make an LLM work hard.
 
