@@ -63,6 +63,24 @@ In the iOS expansion phase, the plan artifact was `fix_plan.md`:
 - [x] P1.3: Add iPad 3-column root layout
 ```
 
+The iteration contract embedded in `CLAUDE.md` for this mode:
+
+```markdown
+## Iteration contract
+1. Load context: read all specs/*.md and stdlib/*.md files (if present).
+2. Read fix_plan.md.
+3. Pick the first unchecked item that is implementation-ready.
+4. Search the codebase before writing any code. Don't assume a feature
+   isn't implemented — it may exist in an extension, protocol, or file
+   you haven't seen yet.
+5. Implement exactly that item.
+6. Run required checks.
+7. If checks pass, mark the item complete and commit.
+8. If you discovered a new project-specific fact (build command,
+   simulator UDID, gotcha), update AGENT.md via a subagent before exiting.
+9. Exit after one item.
+```
+
 This mode handled the iOS port better than I expected. The P-series pass landed 28 commits in about three hours — faster than I would have scoped and sequenced the tickets myself. Cross-cutting work like targets, platform guards, navigation, and entitlements all have tangled dependencies, and letting the loop discover the right order turned out to be more efficient than me trying to impose one.
 
 The tradeoff is you lose fine-grained control. If the agent decides story US-007 comes before the data layer it depends on, you're watching it fail three times before you intervene. But for breadth work — standing up a new platform, wiring a navigation shell — orchestrator mode earned its keep.
@@ -90,6 +108,17 @@ Writing this down explicitly mattered more than any clever prompting. It forced 
 Ticket mode was most useful when acceptance criteria had to be verified in isolation, when macOS runtime behavior needed human checkpoints, or when I was debugging seam issues and didn't want collateral damage. More babysitting, tighter blast radius, higher reliability on narrow tasks.
 
 My default dial by the end: **orchestrator for breadth, ticket mode for risk.**
+
+The two contracts differ in a few key ways:
+
+| | Ticketed Sequential | Huntley-Orchestrator |
+|---|---|---|
+| Plan artifact | `prd.json` | `fix_plan.md` |
+| Task format | `passes: false` stories | unchecked markdown items |
+| Context loading | none | reads `specs/*.md` + `stdlib/*.md` |
+| Codebase search | not required | required before writing code |
+| Learning storage | `progress.txt` | `AGENT.md` (via subagent) |
+| Completion signal | implicit | `<promise>COMPLETE</promise>` |
 
 ## Why macOS Makes This Harder
 

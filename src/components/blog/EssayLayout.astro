@@ -17,6 +17,7 @@ interface Props {
 
 const { post, prev, next, currentPage = 'essays', backHref = '/blog', backLabel = 'Essays', basePath = '/blog' } = Astro.props;
 const { title, date, location, tag } = post.data;
+const isTechnical = post.collection === 'writing';
 
 // Format date as "MMM YYYY"
 const formattedDate = date.toLocaleDateString('en-US', {
@@ -45,7 +46,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
         <div class="article-rule"></div>
       </header>
 
-      <div class="prose">
+      <div class={`prose${isTechnical ? ' prose--technical' : ''}`}>
         <slot />
       </div>
     </article>
@@ -56,3 +57,36 @@ const formattedDate = date.toLocaleDateString('en-US', {
 
 <!-- Carousel collects prose images dynamically -->
 <Carousel client:load />
+
+{isTechnical && (
+  <>
+    <div class="reading-progress" id="reading-progress" />
+    <script>
+      // Reading progress bar
+      const bar = document.getElementById('reading-progress');
+      if (bar) {
+        const update = () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.width = docHeight > 0 ? `${(scrollTop / docHeight) * 100}%` : '0%';
+        };
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+      }
+
+      // Section anchor links
+      document.querySelectorAll('.prose h2, .prose h3').forEach((heading) => {
+        const text = heading.textContent ?? '';
+        const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        heading.id = id;
+        const a = document.createElement('a');
+        a.href = `#${id}`;
+        a.className = 'anchor-link';
+        a.textContent = '§';
+        a.setAttribute('aria-hidden', 'true');
+        heading.appendChild(a);
+      });
+
+    </script>
+  </>
+)}
