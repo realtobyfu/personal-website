@@ -207,7 +207,7 @@ Lock command discipline on day one. Define `tuist generate → tuist test → tu
 
 The barrier is low. You need a bash loop and a prompt file.
 
-Start with [snarktank/ralph](https://github.com/snarktank/ralph) for a ready-made setup, or write the 20-line loop yourself. Write a tight PRD where each story fits in one context window. Invest in backpressure. Seed your project with good patterns. Watch the first few loops before you walk away — you'll learn more about your own spec from watching the agent misinterpret it than from any amount of review.
+Start with [snarktank/ralph](https://github.com/snarktank/ralph) for a ready-made setup, or write the 20-line loop yourself. If you're targeting a native Apple app, [realtobyfu/ralph-ios](https://github.com/realtobyfu/ralph-ios) has the `CLAUDE.md`, `ralph.sh`, and Tuist config I used here. Write a tight PRD where each story fits in one context window. Invest in backpressure. Seed your project with good patterns. Watch the first few loops before you walk away — you'll learn more about your own spec from watching the agent misinterpret it than from any amount of review.
 
 The ralph loop isn't magic and it won't replace you. What it does is make the feedback cycle between "write a spec" and "see if the spec was any good" very fast. That's the bottleneck most of the time anyway.
 
