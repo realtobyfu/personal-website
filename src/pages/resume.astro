@@ -1,0 +1,24 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+---
+
+<BlogLayout title="Resume — Tobias Fu">
+  <div class="resume-page">
+    <embed src="/resume.pdf" type="application/pdf" width="100%" height="100%" />
+  </div>
+</BlogLayout>
+
+<style>
+  .resume-page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .resume-page embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
