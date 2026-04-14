@@ -21,6 +21,8 @@ Grove is a knowledge workspace for macOS and iOS — notes, boards, AI-powered S
 
 <p class="gallery-caption">Grove — a knowledge workspace for macOS and iOS. Capture, organize, and query your notes.</p>
 
+Grove is [live on the App Store](https://apps.apple.com/us/app/grove-ai-knowledge-base/id6759467865?mt=12).
+
 The "ralph loop" is [Geoffrey Huntley's idea](https://ghuntley.com/ralph/), and the pitch is almost too simple to take seriously: a coding agent is just a few hundred lines of code running in a loop with LLM tokens. Each iteration gets fresh context. Memory lives on disk — git history, a progress file, a JSON spec tracking what's done. The agent reads the state, picks a task, does the work, runs the build. If the build passes, it commits. If not, the loop restarts and a new instance picks up the mess.
 
 I tried this on a native Swift app — macOS first, then iOS/iPad — and came away with opinions. Some of them useful.
@@ -222,7 +224,9 @@ Start with [snarktank/ralph](https://github.com/snarktank/ralph) for a ready-mad
 
 The ralph loop isn't magic and it won't replace you. What it does is make the feedback cycle between "write a spec" and "see if the spec was any good" very fast. That's the bottleneck most of the time anyway.
 
-Next on my list: running this pattern against the Grove share extension — a target that compiles the entire app but runs in a sandboxed context with different API constraints. If the loop can navigate that without me babysitting every commit, I'll consider it properly stress-tested.
+Grove shipped. It's [on the App Store](https://apps.apple.com/us/app/grove-ai-knowledge-base/id6759467865?mt=12).
+
+I presented this approach at the [Swift Language User Group (SLUG) x CocoaHeads](https://www.meetup.com/swift-language/events/313452749/) meetup in San Francisco in March. Talking through it with people who build native apps for a living sharpened a few of the ideas here — particularly around the Tuist / build gate discipline and why AppKit is such a rough edge for LLMs.
 
 ---
 
