@@ -1,0 +1,91 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import SiteHeader from '../../components/blog/SiteHeader.astro';
+import BackLink from '../../components/blog/BackLink.astro';
+import { Image } from 'astro:assets';
+import logo from '../../content/projects/grove-logo.png';
+---
+
+<BlogLayout title="Grove — Tobias Fu" description="Grove — AI Knowledge Base for macOS">
+  <div class="blog-container">
+    <SiteHeader currentPage="projects" />
+
+    <main class="blog-content">
+      <BackLink href="/projects" label="Projects" />
+
+      <div class="project-header">
+        <Image src={logo} alt="Grove app icon" width={80} height={80} densities={[2, 3]} class="project-logo" />
+        <div>
+          <h1 class="project-title">Grove</h1>
+          <p class="project-subtitle">AI Knowledge Base for macOS</p>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>
+          Grove is a knowledge workspace for macOS — capture anything, organize it into boards, and ask grounded questions against your own notes using AI. It's built around the idea that your saved context should make AI answers better, not just your memory worse.
+        </p>
+        <p>
+          Most of the app was built using the <a href="/writing/ralph-loop">ralph loop</a> — a bash loop that drives Claude Code against a spec file, using the Swift compiler as backpressure. The iOS port (28 commits, ~3 hours) was the stress test that proved the technique works on real native codebases.
+        </p>
+      </div>
+
+      <a href="https://apps.apple.com/us/app/grove-ai-knowledge-base/id6759467865?mt=12" class="store-button" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
+          <path d="m8 12 4-4 4 4"/>
+          <path d="M12 16V8"/>
+        </svg>
+        <span>App Store</span>
+      </a>
+    </main>
+  </div>
+</BlogLayout>
+
+<style>
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-logo {
+    border-radius: 18px;
+  }
+
+  .project-title {
+    font-family: var(--font-sans);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .project-subtitle {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    margin: 0.25rem 0 0 0;
+  }
+
+  .store-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-md);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    transition: all 0.15s ease;
+  }
+
+  .store-button:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+</style>
